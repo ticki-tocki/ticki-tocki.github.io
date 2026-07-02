@@ -1,10 +1,206 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Ticki Tocki Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="TickiTocki builds custom applications and practical AI systems for companies that need secure, scalable software."
+    >
+    <title>TickiTocki | Application Development and AI Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Hello from GitHub Pages</h1>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="TickiTocki home">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>TickiTocki</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-image" src="assets/hero-technology-consulting.png" alt="Modern software architecture and AI consulting workspace">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Application development and AI consulting</p>
+          <h1>Build software that ships, scales, and learns.</h1>
+          <p class="hero-copy">
+            We design and deliver production-grade applications, AI workflows, and data-backed automation for teams that need measurable business outcomes.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Start a project</a>
+            <a class="button secondary" href="#services">Explore services</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Company metrics">
+        <div>
+          <strong>12+ yrs</strong>
+          <span>software delivery experience</span>
+        </div>
+        <div>
+          <strong>99.9%</strong>
+          <span>availability targets supported</span>
+        </div>
+        <div>
+          <strong>30-60 days</strong>
+          <span>from discovery to first release</span>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <div class="section-kicker">What we do</div>
+        <div class="intro-grid">
+          <h2>Engineering execution for modern digital products.</h2>
+          <p>
+            TickiTocki works with founders, operators, and enterprise technology leaders to turn product strategy into maintainable software. We combine application engineering, cloud architecture, AI integration, and pragmatic consulting in one delivery team.
+          </p>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Services</div>
+            <h2>Focused capabilities, built for delivery.</h2>
+          </div>
+          <p>Each engagement is scoped around a concrete business result, not open-ended technical activity.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">01</span>
+            <h3>Custom application development</h3>
+            <p>Web, mobile, and internal platforms built with clean architecture, usable interfaces, and reliable deployment pipelines.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">02</span>
+            <h3>AI product consulting</h3>
+            <p>Use-case selection, model evaluation, prompt systems, retrieval workflows, and implementation plans grounded in operational reality.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">03</span>
+            <h3>Automation and data workflows</h3>
+            <p>Workflow orchestration, reporting systems, integrations, and decision support tools that reduce manual work without adding fragility.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">04</span>
+            <h3>Cloud and platform engineering</h3>
+            <p>Infrastructure, observability, security controls, and release practices for applications that need to keep running.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="approach">
+        <div class="section">
+          <div class="section-heading">
+            <div>
+              <div class="section-kicker">Approach</div>
+              <h2>Senior delivery without the theater.</h2>
+            </div>
+            <p>We start with the constraint that matters most: shipping useful software into production.</p>
+          </div>
+          <div class="process">
+            <div class="process-step">
+              <span>Discover</span>
+              <h3>Map the business target.</h3>
+              <p>Clarify users, workflows, systems, risk, budget, and the shortest path to a useful release.</p>
+            </div>
+            <div class="process-step">
+              <span>Design</span>
+              <h3>Choose the right architecture.</h3>
+              <p>Define data flows, interfaces, AI boundaries, infrastructure, and delivery milestones before build work expands.</p>
+            </div>
+            <div class="process-step">
+              <span>Deliver</span>
+              <h3>Ship in visible increments.</h3>
+              <p>Release tested functionality, measure adoption, and adjust the roadmap using evidence from real usage.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof" id="work">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Work</div>
+            <h2>Typical outcomes we deliver.</h2>
+          </div>
+        </div>
+        <div class="proof-grid">
+          <article>
+            <h3>AI-enabled operations platform</h3>
+            <p>Converted fragmented intake, document review, and status tracking into a governed workflow with human review points and audit history.</p>
+            <span>Result: faster cycle time, clearer accountability</span>
+          </article>
+          <article>
+            <h3>Customer application rebuild</h3>
+            <p>Replaced a brittle legacy portal with a secure, responsive application backed by automated tests and repeatable cloud deployment.</p>
+            <span>Result: lower maintenance cost, better user adoption</span>
+          </article>
+          <article>
+            <h3>Executive analytics system</h3>
+            <p>Unified operational data sources into role-specific dashboards and alerts for leaders who needed accurate numbers every day.</p>
+            <span>Result: fewer manual reports, faster decisions</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2>Bring us the product, workflow, or AI opportunity you need to move.</h2>
+        </div>
+        <form class="contact-form" action="mailto:hello@tickitocki.com" method="post" enctype="text/plain">
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>Project focus</span>
+            <select name="project-focus" required>
+              <option value="">Select one</option>
+              <option>Application development</option>
+              <option>AI consulting</option>
+              <option>Automation and data workflows</option>
+              <option>Cloud and platform engineering</option>
+            </select>
+          </label>
+          <label class="wide">
+            <span>What needs to change?</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="button primary wide" type="submit">Send inquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>TickiTocki</span>
+      <span>Application development and AI consulting</span>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
