@@ -60,7 +60,7 @@
 
     <div class="actions">
       <a class="button" id="open-app" href="#">Open CapyParty</a>
-      <a class="button secondary" id="install-app" href="#" aria-disabled="true">Download on the App Store</a>
+      <a class="button secondary" id="install-app" href="#" aria-disabled="true">Join the TestFlight beta</a>
     </div>
 
     <p class="note">Install before travelling. After installation, return to the invitation and tap it again.</p>
@@ -68,9 +68,10 @@
   </main>
 
   <script>
-    // Add the provider token (`pt`) from App Store Connect when it is available
-    // to complete campaign attribution for the `family_invite` campaign.
-    const APP_STORE_URL = "https://apps.apple.com/app/id6786782550?ct=family_invite&mt=8";
+    // Replace this beta destination at production launch with the App Store URL
+    // for Apple ID 6786782550, including `ct=family_invite` and the provider
+    // token (`pt`) when it is available.
+    const INSTALL_URL = "https://testflight.apple.com/join/X5MxbHxb";
     const params = new URLSearchParams(window.location.search);
     const host = (params.get("host") || "").toLowerCase();
     const validHost = /^[a-z2-7]{12}$/.test(host);
@@ -86,11 +87,14 @@
       openButton.hidden = true;
     }
 
-    if (APP_STORE_URL.startsWith("https://apps.apple.com/")) {
-      installButton.href = APP_STORE_URL;
+    if (
+      INSTALL_URL.startsWith("https://testflight.apple.com/join/") ||
+      INSTALL_URL.startsWith("https://apps.apple.com/")
+    ) {
+      installButton.href = INSTALL_URL;
       installButton.removeAttribute("aria-disabled");
     } else {
-      installButton.textContent = "App Store link available at launch";
+      installButton.textContent = "Installation link unavailable";
     }
   </script>
 </body>
