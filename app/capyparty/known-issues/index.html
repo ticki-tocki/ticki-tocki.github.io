@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5b76f">
+  <title>CapyParty Known Issues</title>
+  <meta name="description" content="Current beta limitations and workarounds for CapyParty.">
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #3b2a20; background: #fff1dc; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; background: linear-gradient(160deg, #ffe3bc, #fff7ea 62%, #e9f4df); }
+    main { width: min(100%, 760px); margin: 0 auto; padding: 36px; border: 1px solid rgba(98,63,38,.12); border-radius: 28px; background: rgba(255,255,255,.92); box-shadow: 0 18px 60px rgba(98,63,38,.12); }
+    h1 { margin: 0 0 8px; font-size: clamp(30px, 7vw, 44px); line-height: 1.05; }
+    h2 { margin: 0 0 8px; font-size: 21px; }
+    p, li { color: #6f5543; font-size: 16px; line-height: 1.6; }
+    a { color: #a44e1d; font-weight: 650; }
+    .updated { margin: 0 0 28px; color: #8b705d; }
+    .summary { padding: 16px; border-radius: 14px; background: #eef6e8; color: #38502e; font-weight: 650; }
+    .issue { margin-top: 18px; padding: 18px; border: 1px solid #ead9c8; border-radius: 16px; background: #fffaf4; }
+    .issue p { margin: 8px 0 0; }
+    .label { color: #4a3325; font-weight: 700; }
+    nav { margin-top: 34px; padding-top: 20px; border-top: 1px solid #ead9c8; }
+    @media (max-width: 520px) { body { padding: 12px; } main { padding: 26px 20px; border-radius: 22px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>CapyParty Known Issues</h1>
+    <p class="updated">Public TestFlight beta · Reviewed July 18, 2026</p>
+    <p class="summary">Nearby play does not depend on a CapyParty online service. These are the current beta limitations and recovery steps families should know before travelling.</p>
+
+    <section class="issue">
+      <h2>An invitation opens the website instead of the app</h2>
+      <p><span class="label">Affected:</span> Current public TestFlight beta.</p>
+      <p><span class="label">Workaround:</span> Install CapyParty, then tap the original invitation again from Messages, Mail, or Notes while near the host. Typing or pasting the address into Safari does not test the Universal Link. You can also open CapyParty and choose Play together → Join a nearby game.</p>
+    </section>
+
+    <section class="issue">
+      <h2>A nearby party does not appear</h2>
+      <p><span class="label">Affected:</span> Devices where local-network permission, Wi-Fi state, radio conditions, or build compatibility prevents discovery.</p>
+      <p><span class="label">Workaround:</span> Keep Wi-Fi and Bluetooth on, keep both devices nearby, and leave CapyParty open. Enable CapyParty in Settings → Privacy &amp; Security → Local Network. If direct discovery remains unreliable, connect both devices to the same Wi-Fi network or personal hotspot, then retry Host or Join.</p>
+    </section>
+
+    <section class="issue">
+      <h2>The room ends when the host leaves</h2>
+      <p><span class="label">Affected:</span> All current beta nearby rooms. Host migration is not supported.</p>
+      <p><span class="label">Workaround:</span> Keep the host device awake, nearby, and in CapyParty during the game. If the host ends or leaves the room, create a new room and have the other devices rejoin.</p>
+    </section>
+
+    <section class="issue">
+      <h2>Group Play cannot be purchased or restored without internet</h2>
+      <p><span class="label">Affected:</span> Devices that have not already cached verified Group Play ownership.</p>
+      <p><span class="label">Workaround:</span> Purchase or restore Group Play before travelling while signed into the owning Apple Account and connected to the internet. Confirm Settings shows Group Play is ready offline, then complete the Travel Ready test.</p>
+    </section>
+
+    <section class="issue">
+      <h2>Different builds cannot share a room</h2>
+      <p><span class="label">Affected:</span> Families with incompatible CapyParty beta builds or unsupported iOS/iPadOS versions.</p>
+      <p><span class="label">Workaround:</span> Install the same current TestFlight build on every device before travelling. CapyParty currently requires iOS or iPadOS 17 or later.</p>
+    </section>
+
+    <p>For a problem not listed here, email <a href="mailto:support@tickitocki.com?subject=CapyParty%20Beta%20Issue">support@tickitocki.com</a> with the app version and build, device models, OS versions, host or guest role, number of connected devices, selected game, reproduction steps, and any displayed <code>CP-NET-</code> failure code.</p>
+
+    <nav><a href="/app/capyparty/support/">Support</a> · <a href="/app/capyparty/privacy/">Privacy Policy</a> · <a href="/app/capyparty">CapyParty invitation page</a></nav>
+  </main>
+</body>
+</html>
