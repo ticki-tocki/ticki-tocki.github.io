@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "MNXUGD9UW3.com.tickitocki.capyparty"
+        ],
+        "components": [
+          {
+            "/": "/app/capyparty",
+            "comment": "CapyParty nearby-party invitations"
+          }
+        ]
+      }
+    ]
+  }
+}

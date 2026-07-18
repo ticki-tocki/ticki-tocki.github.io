@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5b76f">
+  <title>Join a CapyParty</title>
+  <meta name="description" content="Install or open CapyParty to join a nearby family game.">
+  <meta property="og:title" content="You’re invited to CapyParty">
+  <meta property="og:description" content="Join a nearby party for family games that work without internet after installation.">
+  <style>
+    :root {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #3b2a20;
+      background: #fff1dc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: linear-gradient(160deg, #ffe3bc 0%, #fff7ea 62%, #e9f4df 100%);
+    }
+    main {
+      width: min(100%, 520px);
+      padding: 32px;
+      border: 1px solid rgba(98, 63, 38, 0.12);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 18px 60px rgba(98, 63, 38, 0.14);
+      text-align: center;
+    }
+    h1 { margin: 0 0 12px; font-size: clamp(30px, 8vw, 42px); line-height: 1.05; }
+    p { margin: 0; color: #80634f; font-size: 17px; line-height: 1.5; }
+    .actions { display: grid; gap: 12px; margin-top: 28px; }
+    .button {
+      display: block;
+      padding: 15px 18px;
+      border-radius: 14px;
+      background: #d67938;
+      color: white;
+      font-size: 17px;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .button.secondary { background: #fff4e6; color: #6d452c; border: 1px solid #eac49c; }
+    .button[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
+    .note { margin-top: 22px; padding-top: 20px; border-top: 1px solid #ead9c8; font-size: 14px; }
+    .code { margin-top: 10px; font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; }
+    @media (max-width: 420px) { body { padding: 12px; } main { padding: 24px 18px; border-radius: 22px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>You’re invited to CapyParty</h1>
+    <p>Open the app to join the nearby party. Joining is free, and playing together works without internet after CapyParty is installed.</p>
+
+    <div class="actions">
+      <a class="button" id="open-app" href="#">Open CapyParty</a>
+      <a class="button secondary" id="install-app" href="#" aria-disabled="true">Download on the App Store</a>
+    </div>
+
+    <p class="note">Install before travelling. After installation, return to the invitation and tap it again.</p>
+    <p class="code" id="invite-code" hidden></p>
+  </main>
+
+  <script>
+    // Add the provider token (`pt`) from App Store Connect when it is available
+    // to complete campaign attribution for the `family_invite` campaign.
+    const APP_STORE_URL = "https://apps.apple.com/app/id6786782550?ct=family_invite&mt=8";
+    const params = new URLSearchParams(window.location.search);
+    const host = (params.get("host") || "").toLowerCase();
+    const validHost = /^[a-z2-7]{12}$/.test(host);
+    const openButton = document.getElementById("open-app");
+    const installButton = document.getElementById("install-app");
+    const inviteCode = document.getElementById("invite-code");
+
+    if (validHost) {
+      openButton.href = `capyparty://join?host=${encodeURIComponent(host)}`;
+      inviteCode.textContent = `Party code: ${host}`;
+      inviteCode.hidden = false;
+    } else {
+      openButton.hidden = true;
+    }
+
+    if (APP_STORE_URL.startsWith("https://apps.apple.com/")) {
+      installButton.href = APP_STORE_URL;
+      installButton.removeAttribute("aria-disabled");
+    } else {
+      installButton.textContent = "App Store link available at launch";
+    }
+  </script>
+</body>
+</html>
